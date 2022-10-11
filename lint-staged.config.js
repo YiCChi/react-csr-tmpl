@@ -1,14 +1,13 @@
 const lintStagedConfig = {
   // Type check TypeScript files
   // Lint then format TypeScript files
-  '**/*.(ts|tsx)': () => [
-    'pnpm exec tsc --noEmit',
-    `pnpm exec eslint --fix ${filenames.join(' ')}`,
-    `pnpm exec prettier --write ${filenames.join(' ')}`,
+  '**/*.(ts|tsx)': (fileNames) => [
+    `pnpm exec eslint --fix ${fileNames.join(' ')}`,
+    `pnpm exec prettier --write ${fileNames.join(' ')}`,
   ],
 
   // Format MarkDown and JSON
-  '**/*.(md|json)': (filenames) => `pnpm exec prettier --write ${filenames.join(' ')}`,
+  '**/*.(md|json)': (fileNames) => `pnpm exec prettier --write ${fileNames.join(' ')}`,
 };
 
 export default lintStagedConfig;
