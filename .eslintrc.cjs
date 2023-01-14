@@ -7,34 +7,15 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'prettier',
   ],
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  settings: {
-    'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-        project: `./tsconfig.json`,
-      },
-      node: true,
-    },
-    react: {
-      version: 'detect',
-    },
-  },
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/order': ['error', { alphabetize: { order: 'asc' } }],
-    'import/no-duplicates': 'error',
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
@@ -110,7 +91,6 @@ module.exports = {
     '@typescript-eslint/require-array-sort-compare': ['error', { ignoreStringArray: true }],
     '@typescript-eslint/return-await': 'error',
     '@typescript-eslint/sort-type-union-intersection-members': 'error',
-    '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/switch-exhaustiveness-check': 'error',
 
     // Formatting is almost using prettier. Only use these 3 formatting rules in linter.
