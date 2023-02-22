@@ -1,9 +1,10 @@
 module.exports = {
-  plugins: ['@typescript-eslint', 'react-hooks'],
+  plugins: ['@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/strict',
@@ -14,19 +15,9 @@ module.exports = {
     project: ['./tsconfig.json'],
   },
   rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/default-param-last': 'error',
-    '@typescript-eslint/dot-notation': [
-      'error',
-      {
-        allowKeywords: false,
-        allowPattern: '^a-z+(_a-z+)+$',
-      },
-    ],
     '@typescript-eslint/init-declarations': 'error',
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': 'error',
@@ -34,11 +25,7 @@ module.exports = {
       'error',
       {
         selector: 'variable',
-        filter: {
-          regex: '[Styled|Customized].+',
-          match: false,
-        },
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
       },
       {
         selector: 'parameter',
@@ -51,7 +38,6 @@ module.exports = {
         format: ['camelCase'],
         leadingUnderscore: 'require',
       },
-
       {
         selector: 'typeLike',
         format: ['PascalCase'],
@@ -66,7 +52,6 @@ module.exports = {
         format: ['camelCase', 'PascalCase'],
       },
     ],
-
     '@typescript-eslint/no-dupe-class-members': 'error',
     '@typescript-eslint/no-invalid-this': 'error',
     '@typescript-eslint/no-loop-func': 'error',
@@ -74,10 +59,7 @@ module.exports = {
     '@typescript-eslint/no-redundant-type-constituents': 'warn',
     '@typescript-eslint/no-require-imports': 'warn',
     '@typescript-eslint/no-shadow': 'error',
-    '@typescript-eslint/no-type-alias': [
-      'error',
-      { allowAliases: 'in-unions-and-intersections', allowLiterals: 'in-unions-and-intersections' },
-    ],
+    '@typescript-eslint/no-type-alias': 'off',
     '@typescript-eslint/no-unnecessary-qualifier': 'warn',
     '@typescript-eslint/no-unused-expressions': 'error',
     '@typescript-eslint/no-unused-vars': 'warn',
