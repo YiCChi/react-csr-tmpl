@@ -3,3 +3,4 @@ lint-staged.config.js
 tsconfig.tsbuildinfo
 jest.*
 __tests__
+*.js
