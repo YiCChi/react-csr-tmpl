@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react-swc';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -21,4 +21,17 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react()],
+  test: {
+    root: `${process.cwd()}/src`,
+    environment: 'jsdom',
+    globals: true,
+    coverage: {
+      enabled: true,
+      provider: 'v8',
+      exclude: ['**/**.tsx'],
+      perFile: true,
+      all: true,
+      '100': true,
+    },
+  },
 }));
