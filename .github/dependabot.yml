@@ -1,0 +1,34 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    groups:
+      react:
+        patterns:
+          - 'react*'
+      ui:
+        patterns:
+          - '@emotion*'
+          - '@mui*'
+      test:
+        patterns:
+          - '@testing-library*'
+          - 'vitest'
+          - '@vitest*'
+          - jsdom
+      types:
+        patterns:
+          - '@types*'
+          - typescript
+      linter:
+        patterns:
+          - '*eslint*'
+          - husky
+          - prettier
+          - lint-staged
+      vite:
+        patterns:
+          - vite
+          - '@vite*'
