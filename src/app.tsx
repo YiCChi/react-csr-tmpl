@@ -1,33 +1,28 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './app.css';
+import { cloneDeep } from 'lodash';
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from 'react-router-dom';
+import { Component } from './pages/root';
 
-export default function App() {
-  const [count, setCount] = useState(0);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<Component />}>
+      <Route path="/not-found" lazy={async () => import('./pages/not-found')} />
+      <Route index={true} path="/welcome" lazy={async () => import('./pages/welcome')} />
+    </Route>,
+  ),
+);
 
-  return (
-    <div className='App'>
-      <div>
-        <a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-          <img src='/vite.svg' className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://reactjs.org' target='_blank' rel='noreferrer'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div
-        className='card'
-        onClick={function () {
-          console.log(1);
-        }}
-      >
-        <button onClick={() => setCount(count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-    </div>
-  );
+function App() {
+  const a = { foo: 1 };
+  const b = cloneDeep(a);
+
+  console.log(b);
+
+  return <RouterProvider router={router} />;
 }
+
+export { App };
