@@ -1,2 +1,3 @@
-# pure-react
-start a pure react project with ts
+# vite-vitest-react
+
+react template using vitest, vitest, mui, react-router.
