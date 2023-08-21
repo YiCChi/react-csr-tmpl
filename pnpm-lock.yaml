@@ -21,11 +21,11 @@ dependencies:
     specifier: ^5.14.5
     version: 5.14.5(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.20)(react@18.2.0)
   '@mui/x-data-grid':
-    specifier: ^6.11.1
-    version: 6.11.1(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^6.11.2
+    version: 6.11.2(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-date-pickers':
-    specifier: ^6.11.1
-    version: 6.11.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.11)(@mui/material@5.14.5)(@mui/system@5.14.5)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^6.11.2
+    version: 6.11.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.11)(@mui/material@5.14.5)(@mui/system@5.14.5)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0)
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -783,8 +783,8 @@ packages:
       react-is: 18.2.0
     dev: false
 
-  /@mui/x-data-grid@6.11.1(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-qFyuf6R/JOG46Y62scwH0C7s+xVqfRFU/gv4rUWS9m+EYsabAXTx/g+Mq2t+ZGdaaGZlrpKDavr2PwitbpTMaw==}
+  /@mui/x-data-grid@6.11.2(@mui/material@5.14.5)(@mui/system@5.14.5)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-84IgDwjgQ2eqTJvoj0BxN2KIgQdwTf7pnR0dYxbpcIkB+LMsOxSv502UJkvWWkjm16D4vKcj4QMSLsWhc21BHg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@mui/material': ^5.4.1
@@ -803,8 +803,8 @@ packages:
       reselect: 4.1.8
     dev: false
 
-  /@mui/x-date-pickers@6.11.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.11)(@mui/material@5.14.5)(@mui/system@5.14.5)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-0NnBen60iZNBmJK7m2UU9jPZXW9RRyBL3meAupWyq+j6bLpSWG+8O2TnP1E3KFC7q66bPG6qOGOKKGfzFyR3cg==}
+  /@mui/x-date-pickers@6.11.2(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.11)(@mui/material@5.14.5)(@mui/system@5.14.5)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-AOmXtnnAhjlku03oqRMOG1oJkxazBTz06A6a0iRz+1sUyBWbqz5kKH9eYUYQC4Tv3j2EciRpwyns5xwX3wpc1A==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       '@emotion/react': ^11.9.0
@@ -2172,8 +2172,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -3301,7 +3301,7 @@ packages:
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /rrweb-cssom@0.6.0:
@@ -3800,7 +3800,7 @@ packages:
       postcss: 8.4.27
       rollup: 3.27.2
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /vitest@0.34.1(jsdom@22.1.0):
