@@ -25,13 +25,13 @@ dependencies:
     version: 6.12.0(@mui/material@5.14.6)(@mui/system@5.14.6)(react-dom@18.2.0)(react@18.2.0)
   '@mui/x-date-pickers':
     specifier: ^6.12.0
-    version: 6.12.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.12)(@mui/material@5.14.6)(@mui/system@5.14.6)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0)
+    version: 6.12.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.12)(@mui/material@5.14.6)(@mui/system@5.14.6)(luxon@3.4.2)(react-dom@18.2.0)(react@18.2.0)
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
   luxon:
-    specifier: 3.4.0
-    version: 3.4.0
+    specifier: 3.4.2
+    version: 3.4.2
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -832,7 +832,7 @@ packages:
       reselect: 4.1.8
     dev: false
 
-  /@mui/x-date-pickers@6.12.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.12)(@mui/material@5.14.6)(@mui/system@5.14.6)(luxon@3.4.0)(react-dom@18.2.0)(react@18.2.0):
+  /@mui/x-date-pickers@6.12.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@mui/base@5.0.0-beta.12)(@mui/material@5.14.6)(@mui/system@5.14.6)(luxon@3.4.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-lEfdPKdr2o2jUvEviYB/xaYaHJ3Gf9u/AvU3eCX6R0mzIpi1h1SsmrFOTcBIFkwz1iekUNIdZjfrkKmLX+n6dA==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -879,7 +879,7 @@ packages:
       '@mui/utils': 5.14.6(react@18.2.0)
       '@types/react-transition-group': 4.4.6
       clsx: 2.0.0
-      luxon: 3.4.0
+      luxon: 3.4.2
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -2893,8 +2893,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /luxon@3.4.0:
-    resolution: {integrity: sha512-7eDo4Pt7aGhoCheGFIuq4Xa2fJm4ZpmldpGhjTYBNUYNCN6TIEP6v7chwwwt3KRp7YR+rghbfvjyo3V5y9hgBw==}
+  /luxon@3.4.2:
+    resolution: {integrity: sha512-uBoAVCVcajsrqy3pv7eo5jEUz1oeLmCcnMv8n4AJpT5hbpN9lUssAXibNElpbLce3Mhm9dyBzwYLs9zctM/0tA==}
     engines: {node: '>=12'}
     dev: false
 
