@@ -17,7 +17,6 @@ module.exports = {
   rules: {
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
-    '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/method-signature-style': 'error',
     '@typescript-eslint/naming-convention': [
@@ -52,7 +51,7 @@ module.exports = {
       },
     ],
     '@typescript-eslint/no-import-type-side-effects': 'error',
-    '@typescript-eslint/parameter-properties': ['error', { allow: ['readonly'] }],
+    '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/prefer-readonly': 'error',
     '@typescript-eslint/prefer-regexp-exec': 'error',
