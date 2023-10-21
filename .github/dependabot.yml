@@ -22,6 +22,8 @@ updates:
         patterns:
           - '@types*'
           - typescript
+        exclude-patterns:
+          - '@typescript-eslint*'
       linter:
         patterns:
           - '*eslint*'
@@ -31,4 +33,4 @@ updates:
       vite:
         patterns:
           - vite
-          - '@vite*'
+          - '@vitejs*'
