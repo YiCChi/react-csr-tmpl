@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { isOdd } from '../services/is-odd';
+import { isOdd } from './is-odd';
 
 describe.concurrent('isOdd', () => {
   test('odd', () => {
