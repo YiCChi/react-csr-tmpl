@@ -25,3 +25,6 @@ coverage
 
 # mock server
 server
+
+# cache
+*cache

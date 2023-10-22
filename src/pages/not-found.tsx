@@ -1,5 +1,5 @@
 function Component() {
-  return <div>not found</div>;
+	return <div>not found</div>;
 }
 
 Component.displayName = 'NotFound';
