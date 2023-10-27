@@ -82,47 +82,5 @@ module.exports = {
 		],
 		'no-use-before-define': 'off',
 		'@typescript-eslint/no-use-before-define': 'error',
-
-		// Formatting is almost using prettier. Only use these 3 formatting rules in linter.
-		'@typescript-eslint/lines-between-class-members': 'error',
-		'@typescript-eslint/member-delimiter-style': 'error',
-		'@typescript-eslint/padding-line-between-statements': [
-			'error',
-			{
-				blankLine: 'always',
-				prev: '*',
-				next: 'return',
-			},
-			{
-				blankLine: 'always',
-				prev: ['const', 'let', 'var'],
-				next: '*',
-			},
-			{
-				blankLine: 'any',
-				prev: ['const', 'let', 'var'],
-				next: ['const', 'let', 'var'],
-			},
-			{
-				blankLine: 'always',
-				prev: ['case', 'default'],
-				next: '*',
-			},
-			{
-				blankLine: 'always',
-				prev: 'directive',
-				next: '*',
-			},
-			{
-				blankLine: 'any',
-				prev: 'directive',
-				next: 'directive',
-			},
-			{
-				blankLine: 'always',
-				prev: '*',
-				next: ['interface', 'type'],
-			},
-		],
 	},
 };
