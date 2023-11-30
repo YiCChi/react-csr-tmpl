@@ -1,3 +1,3 @@
 export function isOdd(num: number) {
-	return num % 2 === 1;
+  return num % 2 === 1;
 }

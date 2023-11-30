@@ -6,11 +6,11 @@ import './index.css';
 const container = document.getElementById('root');
 
 if (container) {
-	createRoot(container).render(
-		<StrictMode>
-			<App />
-		</StrictMode>,
-	);
+  createRoot(container).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  );
 } else {
-	throw new Error("root element doesn't exist");
+  throw new Error("root element doesn't exist");
 }
