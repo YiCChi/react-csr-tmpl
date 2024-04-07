@@ -48,9 +48,9 @@
     "@biomejs/biome": "^1.6.3",
     "@testing-library/react": "^14.2.2",
     "@types/lodash": "^4.17.0",
-    "@types/node": "^20.11.30",
-    "@types/react": "^18.2.70",
-    "@types/react-dom": "^18.2.22",
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
@@ -65,7 +65,7 @@
     "prettier": "^3.2.5",
     "prop-types": "15.8.1",
     "ts-node": "^10.9.2",
-    "typescript": "5.4.3",
+    "typescript": "5.4.4",
     "vite": "^5.2.6",
     "vitest": "^1.4.0"
   }
