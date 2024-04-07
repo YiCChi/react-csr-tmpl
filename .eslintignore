@@ -1,6 +1,0 @@
-lint-staged.config.js
-.eslintrc.cjs
-tsconfig.tsbuildinfo
-jest.*
-__tests__
-*.js

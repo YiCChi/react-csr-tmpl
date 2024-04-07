@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev": "vite --host",
     "build-staging": "tsc && vite build --mode staging",
     "build-prod": "tsc && vite build",
@@ -12,8 +12,6 @@
     "test-watch": "vitest",
     "type": "tsc --incremental",
     "lint": "eslint --cache **/*.ts{,x}",
-    "lint-staged": "lint-staged",
-    "pre-commit": "pnpm run \"/(lint|type|lint-staged)/\"",
     "ci": "biome ci"
   },
   "repository": {
@@ -31,13 +29,12 @@
   },
   "homepage": "https://github.com/YiCChi/pure-react#readme",
   "dependencies": {
-    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.14",
-    "@mui/material": "^5.15.14",
-    "@mui/system": "^5.15.14",
-    "@mui/x-data-grid": "^7.1.0",
-    "@mui/x-date-pickers": "^7.1.0",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/system": "^5.15.15",
+    "@mui/x-data-grid": "^7.1.1",
+    "@mui/x-date-pickers": "^7.1.1",
     "lodash": "^4.17.21",
     "luxon": "3.4.4",
     "react": "^18.2.0",
@@ -45,14 +42,14 @@
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.3",
+    "@biomejs/biome": "^1.6.4",
+    "@eslint/eslintrc": "^3.0.2",
+    "@eslint/js": "^9.0.0",
     "@testing-library/react": "^14.2.2",
     "@types/lodash": "^4.17.0",
     "@types/node": "^20.12.5",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
-    "@typescript-eslint/eslint-plugin": "^7.4.0",
-    "@typescript-eslint/parser": "^7.4.0",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "@vitest/coverage-v8": "^1.4.0",
     "eslint": "^8.57.0",
@@ -63,9 +60,9 @@
     "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "prop-types": "15.8.1",
     "ts-node": "^10.9.2",
     "typescript": "5.4.4",
+    "typescript-eslint": "^7.5.0",
     "vite": "^5.2.8",
     "vitest": "^1.4.0"
   }
