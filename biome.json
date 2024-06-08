@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "organizeImports": {
-    "enabled": true
+    "enabled": false
   },
   "formatter": {
     "include": ["src/**/*.ts", "src/**/*.tsx", "*.ts", "*.js"],

@@ -1,8 +1,9 @@
 {
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
     "source.fixAll": "explicit",
-    "source.organizeImports.biome": "explicit"
+    "source.organizeImports": "explicit"
   },
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
