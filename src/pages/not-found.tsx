@@ -1,7 +1,9 @@
-function Component() {
-  return <div>not found</div>;
+function NotFound() {
+  return (
+    <div>
+      <div>not-found</div>
+    </div>
+  );
 }
 
-Component.displayName = 'NotFound';
-
-export { Component };
+export { NotFound };

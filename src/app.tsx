@@ -1,18 +1,14 @@
 import { cloneDeep } from 'lodash';
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from 'react-router-dom';
-import { Component } from './pages/root';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router';
+import { NotFound } from './pages/not-found';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Component />}>
-      <Route path="/not-found" lazy={async () => import('./pages/not-found')} />
-      <Route index={true} path="/welcome" lazy={async () => import('./pages/welcome')} />
-    </Route>,
+    <>
+      <Route index lazy={async () => import('./pages/welcome')} />
+      <Route path="/not-found" element={<NotFound />} />
+      <Route path="/sub/*" lazy={async () => import('./pages/sub/sub')} />
+    </>,
   ),
 );
 

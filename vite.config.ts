@@ -14,7 +14,7 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: 'assets/[name].[ext]',
         manualChunks: {
           react: ['react', 'react-dom'],
-          'react-router': ['react-router-dom'],
+          'react-router': ['react-router'],
           lodash: ['lodash'],
         },
       },
