@@ -22,15 +22,12 @@ updates:
         patterns:
           - '@types*'
           - typescript
-        exclude-patterns:
-          - '@typescript-eslint*'
+          - tsx
       linter:
         patterns:
-          - '*eslint*'
+          - '*biome*'
           - husky
           - prettier
-          - lint-staged
-      vite:
+      build:
         patterns:
-          - vite
-          - '@vitejs*'
+          - '*rsbuild*'
