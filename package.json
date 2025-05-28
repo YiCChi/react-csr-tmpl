@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "dev": "vite --host",
-    "build-staging": "tsc && vite build --mode staging",
-    "build-prod": "tsc && vite build",
-    "preview": "tsc && vite build && vite preview",
+    "dev": "rsbuild dev",
+    "build": "rsbuild build",
+    "build:staging": "rsbuild build --env-mode staging",
+    "build:prod": "rsbuild build",
+    "preview": "rsbuild preview",
     "test": "vitest run",
-    "test-watch": "vitest",
+    "test:watch": "vitest",
     "type": "tsc --incremental",
-    "lint": "eslint --cache **/*.ts{,x}",
+    "lint": "biome check",
     "ci": "biome ci"
   },
   "repository": {
@@ -34,7 +35,6 @@
     "@mui/material": "7.1.0",
     "@mui/x-data-grid": "8.4.0",
     "@mui/x-date-pickers": "8.4.0",
-    "lodash": "4.17.21",
     "luxon": "3.6.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -42,20 +42,20 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "@rsbuild/core": "1.3.22",
+    "@rsbuild/plugin-react": "1.3.1",
+    "@rsbuild/plugin-type-check": "1.2.2",
     "@testing-library/react": "16.3.0",
-    "@types/lodash": "4.17.17",
-    "@types/node": "22.15.21",
-    "@types/react": "19.1.5",
+    "@types/node": "22.15.23",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
-    "@vitejs/plugin-react-swc": "3.10.0",
     "@vitest/coverage-v8": "3.1.4",
     "husky": "9.1.7",
     "jsdom": "26.1.0",
     "prettier": "3.5.3",
     "ts-node": "10.9.2",
     "typescript": "5.8.3",
-    "vite": "6.3.5",
     "vitest": "3.1.4"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

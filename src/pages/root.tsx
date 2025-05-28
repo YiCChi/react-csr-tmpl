@@ -1,8 +1,8 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router';
 import { CounterContextProvider } from '../context';
 
 function Component() {
-  console.log('this is backend uri', import.meta.env.VITE_API_URL);
+  console.log('this is backend uri', import.meta.env.PUBLIC_API_URL);
 
   return (
     <CounterContextProvider>

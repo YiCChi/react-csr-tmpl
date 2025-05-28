@@ -1,4 +1,3 @@
-import { cloneDeep } from 'lodash';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router';
 import { NotFound } from './pages/not-found';
 
@@ -13,11 +12,6 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  const a = { foo: 1 };
-  const b = cloneDeep(a);
-
-  console.log(b);
-
   return <RouterProvider router={router} />;
 }
 
