@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { mayStr } from '../services/may-error';
+import { mayStr } from '../services/may-error.ts';
 
 function Component() {
   const [str, setStr] = useState('empty');

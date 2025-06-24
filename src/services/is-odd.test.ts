@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { isOdd } from './is-odd';
+import { isOdd } from './is-odd.ts';
 
 describe.concurrent('isOdd', () => {
   test('odd', () => {

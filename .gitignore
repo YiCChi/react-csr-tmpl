@@ -23,8 +23,5 @@ coverage
 *.sln
 *.sw?
 
-# mock server
-server
-
 # cache
 *cache

@@ -3,3 +3,4 @@ onlyBuiltDependencies:
   - '@swc/core'
   - core-js
   - esbuild
+enableGlobalVirtualStore: true

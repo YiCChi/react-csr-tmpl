@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router';
-import { CounterContextProvider } from '../context';
+import { CounterContextProvider } from '../context/index.ts';
 
 function Component() {
   console.log('this is backend uri', import.meta.env.PUBLIC_API_URL);
