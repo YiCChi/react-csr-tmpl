@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { mayStr } from '../services/may-error.ts';
 import { useQuery } from '@tanstack/react-query';
-import { trpc } from '../utils/trpc.ts';
+import { useState } from 'react';
 import { Link } from 'react-router';
+import { mayStr } from '../services/may-error.ts';
+import { trpc } from '../utils/trpc.ts';
 
 function Component() {
   const [str, setStr] = useState('empty');

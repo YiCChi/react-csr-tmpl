@@ -1,6 +1,6 @@
-import { Outlet, Link } from 'react-router';
-import { CounterContextProvider } from '../context/counter-context.tsx';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { Link, Outlet } from 'react-router';
+import { CounterContextProvider } from '../context/counter-context.tsx';
 import { queryClient } from '../utils/trpc.ts';
 
 function Root() {

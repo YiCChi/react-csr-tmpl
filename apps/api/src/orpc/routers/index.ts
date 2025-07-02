@@ -1,10 +1,11 @@
 import { RPCHandler } from '@orpc/server/node';
-import { userRouter } from './user';
+import { BatchHandlerPlugin } from '@orpc/server/plugins';
 import { postRouter } from './post';
+import { userRouter } from './user';
 
 export const router = {
   user: userRouter,
   post: postRouter,
 };
 
-export const handler = new RPCHandler(router);
+export const handler = new RPCHandler(router, { plugins: [new BatchHandlerPlugin()] });

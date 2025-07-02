@@ -1,5 +1,5 @@
 import { ORPCError, os } from '@orpc/server';
-import { Context } from './context';
+import type { Context } from './context';
 
 export const loggingMiddleware = os
   .$context<Context>()
@@ -16,18 +16,20 @@ export const loggingMiddleware = os
     return result;
   });
 
-export const authMiddleware = os.$context<Context>().middleware(async ({ context, next }) => {
-  const idToken = context.req.headers?.cookie
-    ?.split(';')
-    .map((cookie: string) => {
-      const [key, value] = cookie.split('=');
-      if (!key) return { key: '', value: value?.trim() ?? '' };
-      return { key: key.trim(), value: value?.trim() ?? '' };
-    })
-    .find((kv: any) => kv.key === '__id_token')?.value;
+export const authMiddleware = os
+  .$context<Context>()
+  .middleware(async ({ context, next, errors }) => {
+    const idToken = context.req.headers?.cookie
+      ?.split(';')
+      .map((cookie: string) => {
+        const [key, value] = cookie.split('=');
+        if (!key) return { key: '', value: value?.trim() ?? '' };
+        return { key: key.trim(), value: value?.trim() ?? '' };
+      })
+      .find((kv: any) => kv.key === '__id_token')?.value;
 
-  if (!idToken) {
-    // throw new ORPCError('UNAUTHORIZED');
-  }
-  return next({ context: { ...context, idToken } });
-});
+    if (!idToken) {
+      // throw new ORPCError('UNAUTHORIZED');
+    }
+    return next({ context: { ...context, idToken } });
+  });

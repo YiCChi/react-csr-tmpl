@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { trpc, trpcClient } from '../utils/trpc';
-import FileUploadDemo from '../components/file-upload-demo';
-import { orpc } from '../utils/orpc';
+import { isDefinedError } from '@orpc/client';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import type React from 'react';
+import { useState } from 'react';
+import FileUploadDemo from '../components/file-upload-demo.tsx';
+import { orpc } from '../utils/orpc.ts';
+import { trpc, trpcClient } from '../utils/trpc.ts';
 
 export default function PostManagementPage() {
   const [selectedPostId, setSelectedPostId] = useState<number>(1);
@@ -15,6 +17,24 @@ export default function PostManagementPage() {
   });
 
   const queryClient = useQueryClient();
+
+  // test demo
+  const { error: e } = useQuery(orpc.post.errorExample.queryOptions());
+  const { error: de } = useQuery(orpc.post.definedErrorExample.queryOptions());
+
+  if (isDefinedError(e)) {
+    console.log(e.status);
+    e.status;
+    if (e.code === 'BAR') {
+      console.error('错误代码 BAR:', e.data);
+    } else if (e.code === 'FORBIDDEN') {
+      console.error('错误代码 FORBIDDEN:', e.data);
+    }
+  } else {
+    console.log(e);
+  }
+
+  // test demo
 
   // 查询文章列表
   const {
@@ -130,7 +150,7 @@ export default function PostManagementPage() {
   // Base64 文件上传
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file || !selectedPost) return;
+    if (!(file && selectedPost)) return;
 
     const reader = new FileReader();
     reader.onload = () => {
@@ -148,7 +168,7 @@ export default function PostManagementPage() {
   // FormData 文件上传
   const handleFormDataUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file || !selectedPost) return;
+    if (!(file && selectedPost)) return;
 
     const formData = new FormData();
     formData.append('postId', selectedPost.id.toString());
@@ -310,7 +330,7 @@ export default function PostManagementPage() {
           {postLoading ? (
             <p>加载中...</p>
           ) : postError ? (
-            <p style={{ color: 'red' }}>加载失败: {postError?.message || '未知错误'}</p>
+            <p style={{ color: 'red' }}>加载失败: {postError?.shape?.data.foo || '未知错误'}</p>
           ) : selectedPost ? (
             <div>
               {/* 文章信息 */}
@@ -651,7 +671,7 @@ export default function PostManagementPage() {
 
         <button
           onClick={handleCreatePost}
-          disabled={!newPostData.title || !newPostData.content || createPostMutation.isPending}
+          disabled={!(newPostData.title && newPostData.content) || createPostMutation.isPending}
           style={{
             padding: '12px 24px',
             backgroundColor:

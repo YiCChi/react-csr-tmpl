@@ -1,10 +1,10 @@
-import { protectedProcedure, publicProcedure, router } from '../trpc';
-import { z } from 'zod';
 import fs from 'node:fs';
 import path from 'node:path';
-import { octetInputParser } from '@trpc/server/http';
 import { Writable } from 'node:stream';
+import { octetInputParser } from '@trpc/server/http';
 import type _ from 'undici-types';
+import { z } from 'zod';
+import { protectedProcedure, publicProcedure, router } from '../trpc';
 
 // 模拟文章数据存储
 const postDatabase = new Map([
@@ -219,7 +219,7 @@ export const postRouter = router({
       const postId = input.get('postId');
       const file = input.get('file') as File;
 
-      if (!postId || !file) {
+      if (!(postId && file)) {
         throw new Error('Post ID and file are required');
       }
 

@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { trpc, trpcClient } from '../utils/trpc';
-import { orpc } from '../utils/orpc';
+import type React from 'react';
+import { useRef, useState } from 'react';
+import { orpc } from '../utils/orpc.ts';
+import { trpc, trpcClient } from '../utils/trpc.ts';
 
 interface FileUploadDemoProps {
   postId: number;

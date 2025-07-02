@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { trpc, trpcClient } from '../utils/trpc';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import type React from 'react';
+import { useState } from 'react';
+import { trpc, trpcClient } from '../utils/trpc.ts';
 
 export default function UserManagementPage() {
   const [selectedUserId, setSelectedUserId] = useState<number>(1);
@@ -82,7 +83,7 @@ export default function UserManagementPage() {
 
   const handleAvatarUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (!file || !selectedUser) return;
+    if (!(file && selectedUser)) return;
 
     const reader = new FileReader();
     reader.onload = () => {
@@ -408,7 +409,7 @@ export default function UserManagementPage() {
 
         <button
           onClick={handleCreateUser}
-          disabled={!newUserData.name || !newUserData.email || createUserMutation.isPending}
+          disabled={!(newUserData.name && newUserData.email) || createUserMutation.isPending}
           style={{
             padding: '12px 24px',
             backgroundColor:

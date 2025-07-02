@@ -1,9 +1,9 @@
-import express from 'express';
-import cors from 'cors';
 import * as trpcExpress from '@trpc/server/adapters/express';
+import cors from 'cors';
+import express from 'express';
+import { handler } from './orpc/routers';
 import { appRouter } from './trpc';
 import { createContext } from './trpc/trpc';
-import { handler } from './orpc/routers';
 
 const app = express();
 const port = process.env.PORT || 4000;

@@ -1,5 +1,5 @@
 import { TRPCError } from '@trpc/server';
-import { Middleware } from './trpc';
+import type { Middleware } from './trpc';
 
 export const authMiddleware: Middleware = async ({ ctx, next }) => {
   if (!ctx.idToken) {

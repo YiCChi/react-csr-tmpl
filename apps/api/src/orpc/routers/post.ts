@@ -1,8 +1,8 @@
-import { protectedProcedure, publicProcedure } from '../orpc';
-import { z } from 'zod';
 import fs from 'node:fs';
 import path from 'node:path';
 import type _ from 'undici-types';
+import { z } from 'zod';
+import { protectedProcedure, publicProcedure } from '../orpc';
 
 // 模拟文章数据存储
 const postDatabase = new Map([
@@ -217,7 +217,7 @@ export const postRouter = {
       const postId = input.get('postId');
       const file = input.get('file') as File;
 
-      if (!postId || !file) {
+      if (!(postId && file)) {
         throw new Error('Post ID and file are required');
       }
 
@@ -373,5 +373,18 @@ export const postRouter = {
       generatedAt: new Date(),
       totalUniqueTags: tagCount.size,
     };
+  }),
+
+  definedErrorExample: protectedProcedure.handler(({ errors }) => {
+    throw errors.FOO({
+      data: {
+        bar: 'baz',
+        baz: 123,
+      },
+    });
+  }),
+
+  errorExample: protectedProcedure.handler(() => {
+    throw new Error('This is a simulated error for testing purposes');
   }),
 };
