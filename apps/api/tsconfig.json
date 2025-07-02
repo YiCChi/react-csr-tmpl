@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "allowJs": false,
+    "strict": true,
+    "lib": ["ES2024"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": "dist",
+    "declaration": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
+}

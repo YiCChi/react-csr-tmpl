@@ -3,7 +3,8 @@
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "include": ["rsbuild.config.ts", "vitest.config.ts"],
+  "exclude": ["noe_modules", "dist"],
 }
