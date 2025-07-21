@@ -48,7 +48,7 @@
     "@rsbuild/plugin-type-check": "1.2.3",
     "@rstest/core": "0.0.7",
     "@testing-library/react": "16.3.0",
-    "@types/node": "~22.15.32",
+    "@types/node": "~24.0.15",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vitest/coverage-v8": "3.2.4",
