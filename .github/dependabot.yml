@@ -31,3 +31,4 @@ updates:
       build:
         patterns:
           - '*rsbuild*'
+          - '*rstest*'
