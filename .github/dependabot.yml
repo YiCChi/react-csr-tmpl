@@ -18,8 +18,6 @@ updates:
       test:
         patterns:
           - '@testing-library*'
-          - 'vitest'
-          - '@vitest*'
           - jsdom
       types:
         patterns:

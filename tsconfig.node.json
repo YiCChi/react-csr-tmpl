@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
+    "lib": ["ES2024"],
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["rsbuild.config.ts", "vitest.config.ts"],
+  "include": ["rsbuild.config.ts"],
 }
