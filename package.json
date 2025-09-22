@@ -45,11 +45,11 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
-    "@rsbuild/core": "1.5.0",
+    "@rsbuild/core": "1.5.11",
     "@rsbuild/plugin-react": "1.4.0",
     "@rsbuild/plugin-type-check": "1.2.4",
     "@rslint/core": "0.1.13",
-    "@rstest/core": "0.3.4",
+    "@rstest/core": "0.4.1",
     "@testing-library/react": "16.3.0",
     "@types/node": "24.5.0",
     "@types/react": "19.1.13",
