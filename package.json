@@ -41,7 +41,7 @@
     "luxon": "3.7.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "react-router": "7.9.1"
+    "react-router": "7.9.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.4",
