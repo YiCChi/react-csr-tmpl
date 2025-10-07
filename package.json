@@ -44,7 +44,7 @@
     "react-router": "7.9.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.2.4",
+    "@biomejs/biome": "2.2.5",
     "@rsbuild/core": "1.5.0",
     "@rsbuild/plugin-react": "1.4.0",
     "@rsbuild/plugin-type-check": "1.2.4",
