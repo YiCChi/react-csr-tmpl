@@ -1,4 +1,5 @@
 import { describe, expect, test } from '@rstest/core';
+
 import { isEven } from './is-even.ts';
 
 describe.concurrent('isEven', () => {

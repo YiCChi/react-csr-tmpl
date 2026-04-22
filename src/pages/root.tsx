@@ -1,4 +1,5 @@
 import { Outlet } from 'react-router';
+
 import { CounterContextProvider } from '../context/index.ts';
 
 function Component() {

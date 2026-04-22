@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router';
+
 import { Component as Root } from './root.tsx';
 
 const DashBoard = lazy(async () => import('./dashboard.tsx'));

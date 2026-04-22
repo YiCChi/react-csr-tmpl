@@ -6,5 +6,5 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["rsbuild.config.ts"],
+  "include": ["rsbuild.config.ts"]
 }

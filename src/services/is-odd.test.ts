@@ -1,4 +1,5 @@
 import { describe, expect, test } from '@rstest/core';
+
 import { isOdd } from './is-odd.ts';
 
 describe.concurrent('isOdd', () => {
