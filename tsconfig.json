@@ -16,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "types": ["react", "react-dom", "node"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "server/**/*.ts"],
   "exclude": ["node_modules"],

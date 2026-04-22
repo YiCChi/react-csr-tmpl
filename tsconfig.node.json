@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["ES2024"],
+    "lib": ["es2025"],
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["rsbuild.config.ts"]
+  "include": ["rsbuild.config.ts", "rstest.config.ts", "rslint.config.ts"]
 }
